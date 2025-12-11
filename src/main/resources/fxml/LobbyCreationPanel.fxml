@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/LobbyCreation.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.LobbyCreationPanelController">
+  <columnConstraints>
+    <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="33.33" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="33.33" prefWidth="100.0" />
+    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="33.33" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" percentHeight="13.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+    <RowConstraints fillHeight="false" minHeight="10.0" percentHeight="74.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" percentHeight="13.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox id="vbox" GridPane.columnSpan="3" GridPane.rowSpan="3">
+         <children>
+            <GridPane fx:id="boardGridPane">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="28.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="46.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="28.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" percentHeight="28.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fitHeight="977.0" fitWidth="1704.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="3" GridPane.rowSpan="2">
+                     <image>
+                        <Image url="@../images/Lobby_Creation.png" />
+                     </image>
+                  </ImageView>
+                  <HBox id="player-counter-hbox" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3">
+                     <children>
+                        <MFXButton fx:id="minusPlayerButton">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/components/buttons/Minus.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MFXButton>
+                        <TextField id="player-counter-textfield" fx:id="playerCounterField" />
+                        <MFXButton fx:id="addPlayerButton">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/components/buttons/Plus.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MFXButton>
+                     </children>
+                  </HBox>
+                  <VBox id="presets-vbox" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <MFXButton fx:id="classicPresetButton">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="386.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/game_presets/Classic.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MFXButton>
+                        <MFXButton fx:id="specialPresetButton" layoutX="10.0" layoutY="10.0">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="386.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/game_presets/Special.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MFXButton>
+                        <MFXButton fx:id="extremePresetButton" layoutX="10.0" layoutY="80.0">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="386.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/game_presets/Extreme.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MFXButton>
+                     </children>
+                  </VBox>
+                  <GridPane GridPane.columnSpan="3" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fx:id="roleImageView" fitHeight="53.0" fitWidth="612.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@../images/roles_category/Secondary.png" />
+                           </image>
+                        </ImageView>
+                        <VBox id="arrow-vbox" prefHeight="200.0" prefWidth="100.0" GridPane.rowSpan="2">
+                           <children>
+                              <MFXButton fx:id="leftArrowButton" computeRadiusMultiplier="false" rippleAnimateBackground="false" rippleAnimationSpeed="0.0" rippleBackgroundOpacity="0.0" rippleRadius="0.0" rippleRadiusMultiplier="0.0">
+                                 <graphic>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/components/buttons/Right_Arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MFXButton>
+                           </children>
+                        </VBox>
+                        <VBox id="arrow-vbox" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowSpan="2">
+                           <children>
+                              <MFXButton fx:id="rightArrowButton" computeRadiusMultiplier="false" rippleAnimateBackground="false" rippleAnimationSpeed="0.0" rippleBackgroundOpacity="0.0" rippleRadius="0.0" rippleRadiusMultiplier="0.0">
+                                 <graphic>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/components/buttons/Right_Arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MFXButton>
+                           </children>
+                        </VBox>
+                        <StackPane fx:id="roleStackPane" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <FlowPane id="flow-pane" fx:id="goodRolesFlowPane" prefHeight="200.0" prefWidth="200.0" visible="false" />
+                              <FlowPane id="flow-pane" fx:id="evilRolesFlowPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
+                              <FlowPane id="flow-pane" fx:id="secondaryRolesFlowPane" prefHeight="200.0" prefWidth="200.0" visible="false" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <HBox id="close-hbox" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+         <children>
+            <MFXButton fx:id="closeButton">
+               <graphic>
+                  <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Close_Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MFXButton>
+         </children>
+      </HBox>
+      <HBox id="create-hbox" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <MFXButton fx:id="createButton">
+               <graphic>
+                  <ImageView fitHeight="420.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Create_Lobby_Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MFXButton>
+         </children>
+      </HBox>
+   </children>
+</GridPane>

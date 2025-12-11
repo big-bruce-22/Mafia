@@ -1,0 +1,15 @@
+# Maven output
+target/
+
+# Compiled class files
+*.class
+
+# Logs and temp files
+*.log
+*.tmp
+
+*.zip
+*.json
+!/.vscode/launch.json
+!/.vscode/settings.json
+pom copy.xml

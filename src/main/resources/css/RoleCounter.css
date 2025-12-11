@@ -1,0 +1,58 @@
+@import "../fonts/Fonts.css";
+
+.root {
+    -fx-font-family: "Norwester";
+    -fx-background: transparent;
+}
+
+.root .mfx-button {
+    -fx-content-display: graphic-only;
+    -fx-background-color: transparent;
+    -mfx-button-type: raised;
+    -fx-padding: 0px;
+}
+
+.root .button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.root .image-view {
+    -fx-background-radius: 2px;
+    -fx-border-radius: 2px;
+}
+
+.root #vbox {
+    -fx-alignment: center;
+    -fx-spacing: 10px
+}
+
+.root #center-vbox {
+    -fx-alignment: center;
+}
+
+.root #role-label {
+    -fx-font-family: "Anton";
+    -fx-text-fill: white;
+    -fx-font-size: 40px;
+    -fx-font-style: italic;
+}
+
+.root #description-hbox {
+    -fx-alignment: bottom-center;
+}
+
+.root #textfield {
+    -fx-font-size: 75px;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+
+    -fx-pref-width: 374px;
+    -fx-pref-height: 117px;
+
+    -fx-background-color: transparent;
+    -fx-background-image: url("../images/components/textfields/1.png");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-padding: 10 15 10 15;
+}
